@@ -20,6 +20,8 @@ a {
   color: inherit;
 }
 
+
+/* transtion for light and dark mode */
 .theme{
   transition: 1s all ease;
 }
