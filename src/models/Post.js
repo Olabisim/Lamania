@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 
 const postSchema = new Schema(
@@ -28,4 +28,6 @@ const postSchema = new Schema(
 );
 
 //If the Post collection does not exist create a new one.
-export default mongoose.models.Post || mongoose.model("Post", postSchema);
+// export default mongoose.models.Post || mongoose.model("Post", postSchema);
+
+export default models.Post || model("Post", postSchema);
