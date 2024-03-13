@@ -17,14 +17,17 @@ async function getData(id) {
 }
 
 
-export async function generateMetadata({ params }) {
-
+export async function generateMetadata({params}) {
+  
   const post = await getData(params.id)
+
   return {
-    title: post.title,
-    description: post.desc,
-  };
+    title: post.title,  
+    description: post.desc
+  }
+
 }
+
 
 const BlogPost = async ({ params }) => {
   const data = await getData(params.id);
