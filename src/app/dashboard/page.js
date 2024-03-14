@@ -88,7 +88,8 @@ const Dashboard = () => {
     }
   };
 
-  if (session.status === "authenticated") {
+  // it will never enter dashboard unless it is authenticated no need of this line 
+  // if (session.status === "authenticated") {
     return (
       <div className={styles.container}>
         <div className={styles.posts}>
@@ -124,7 +125,7 @@ const Dashboard = () => {
         </form>
       </div>
     );
-  }
+  // }
 };
 
 export default Dashboard;
