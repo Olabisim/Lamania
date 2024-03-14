@@ -70,7 +70,9 @@ const Dashboard = () => {
           username: session.data.user.name,
         }),
       });
+      // to add data automatically to the output 
       mutate();
+      // e.target.reset to reset all inputs 
       e.target.reset()
     } catch (err) {
       console.log(err);
@@ -82,6 +84,7 @@ const Dashboard = () => {
       await fetch(`/api/posts/${id}`, {
         method: "DELETE",
       });
+      // mutate to automatically refresh
       mutate();
     } catch (err) {
       console.log(err);
