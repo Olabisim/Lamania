@@ -38,6 +38,7 @@ export const POST = async (request) => {
         await connect();
 
         await newPost.save();
+        // await Post.save(newPost);
 
         return new NextResponse("Post has been created", {status:201})
 
